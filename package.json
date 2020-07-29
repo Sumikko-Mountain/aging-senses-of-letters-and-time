@@ -1,0 +1,22 @@
+{
+  "name": "aging-senses-of-letters-and-time",
+  "version": "1.0.0",
+  "description": "I felt like I had grown up when the letters in the textbook got smaller.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sumikko-Mountain/aging-senses-of-letters-and-time.git"
+  },
+  "author": "yuiko suyama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sumikko-Mountain/aging-senses-of-letters-and-time/issues"
+  },
+  "homepage": "https://github.com/Sumikko-Mountain/aging-senses-of-letters-and-time#readme",
+  "dependencies": {
+    "destyle.css": "^1.0.13"
+  }
+}
