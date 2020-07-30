@@ -1,18 +1,7 @@
-/* Fix user-agent */
-
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
-/*font-weight 100%は16px*/
 
 * {
   box-sizing: border-box;
 }
-
-#defaultCanvas0{
-  position: fixed;
-  top: 0; 
-}
-
-
 
 
 html {
@@ -30,9 +19,11 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  writing-mode: vertical-rl;
-  /*font-family: Kyoukasho ICA Light;*/
-  font-family: UDDigiKyokasho R;
+  /*writing-mode: vertical-rl;*/
+  /*font-family: Kyoukasho ICA Regular;*/
+  font-size:16pt;
+ font-family: UDDigiKyokasho R;
+ /* font-family:  GJ Ryumin Regular KL;*/
 }
 
 
@@ -50,24 +41,20 @@ li{
  
   }
 
-
-  .cursor {
-    transition-timing-function: ease-out;
-    background-color: red;
-    border-radius: 5px;
-    height: 10px;
-    transition-duration: 500ms;
-    transform: translateX(-50%) translateY(-50%);
-    position: fixed;
-    width: 10px;
-  }
+.wrapper{
+  max-width:1000px;
+  margin: 30px 500px;
+}
 
   .BG-BLUE {
     background-color: #40b7ff;
   }
 
-  .testDiv{
-    width :300px;
-    height:1400px;
-    background-color:#ae45bb;
+
+  .year_1{
+height:2000px;
+  }
+  .year_2{
+    display:none;
+    height:2000px;
   }

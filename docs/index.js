@@ -1,6 +1,6 @@
 $(function () {
     var FADE_TIME = 150; // ms
-    var TYPING_TIMER_LENGTH = 400; // ms
+    var TYPING_TIMER_LENGTH = 1400; // ms
     var COLORS = [
         '#e21400', '#91580f', '#f8a700', '#f78b00',
         '#58dc00', '#287b00', '#a8f07a', '#4ae8c4',
@@ -14,6 +14,7 @@ $(function () {
     console.log(windowWidth, windowHeight);
 
     var $year_1 = $('.year_1.unit');
+    var $year_2 = $('.year_2.unit');
 
     //デフォルトでは状態を表すフラグをfasleにしておく
     var connected = false;//接続状態
@@ -24,10 +25,15 @@ $(function () {
 
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
+        /*if ($(this).scrollTop() > 100) {
             $year_1.addClass('BG-BLUE');
+        } else */if ($(this).scrollTop() > 200) {
+            /* $year_1.fadeOut();*/
+            $year_2.fadeIn(FADE_TIME);
         } else {
             $year_1.removeClass('BG-BLUE');
+            $year_2.fadeOut(FADE_TIME);
+
         }
     });
 
