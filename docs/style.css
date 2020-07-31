@@ -1,25 +1,20 @@
 
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
-
-html {
- 
-  -webkit-font-smoothing: antialiased;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-
-html, input {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: 400;
-}
 
 html, body {
+   /*フォントのアンチエイリアス設定*/
+   -webkit-font-smoothing: antialiased;/*Webkit用*/
+   -moz-osx-font-smoothing: grayscale;/*Firefox用*/
+ 
+  /*wrapperを画面一杯に表示したい場合，それにheight100%を指定するだけでなく，bodyに高さを持たせておく必要がある*/
   height: 100%;
   margin: 0;
   padding: 0;
-  /*writing-mode: vertical-rl;*/
   /*font-family: Kyoukasho ICA Regular;*/
   font-size:16pt;
  font-family: UDDigiKyokasho R;
@@ -36,10 +31,13 @@ li{
   list-style: none;
  
 }
+a,
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
 
-.ja_rtl {
- 
-  }
+
 
 .wrapper{
   max-width:1000px;
@@ -80,7 +78,9 @@ position:-webkit-sticky;
     min-height:1000px;
   }
 
-
+.block-one{
+  background:rgb(130,190,250,0.9);
+}
   .block {
     width: 100%;
     height: 100vh;
@@ -90,11 +90,12 @@ position:-webkit-sticky;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background: #fff;
+   /* background: #fff;*/
   }
 
   .block > p{
     display: inline-block;
+   /* writing-mode: vertical-rl;/*縦書きにする*/
     padding: 0;
     margin: 0;
   }
@@ -117,5 +118,154 @@ position:-webkit-sticky;
   }
 
   .block-one{
-    overflow: scroll;
+
   }
+  .sentence{
+    
+  }
+
+  .effect i {
+    height: 120px;
+    padding: 20px;
+    font-size: 100px;
+    transition: .8s;
+  } 
+  .effect div {
+    margin: auto;
+    transition: .8s;
+    transition-delay: .8s;
+  }
+
+
+
+
+
+      
+
+  .cover {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 30pt;
+
+    
+}
+
+.centerBoxFix {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 20px;
+    line-height: 160%;
+    text-align: center;
+}
+
+.centerBoxLast {
+    z-index: -1;
+}
+
+.centerBox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    height: 200px;
+    line-height: 160%;
+    text-align: center;
+  
+}
+
+
+
+.centerBox div {
+    margin: auto;
+    transition: .8s;
+    /* transition-delay: .8s;*/
+}
+
+.centerBox p {
+    margin: auto;
+    transition: .8s;
+    /* transition-delay: .8s;*/
+}
+
+.section1 {
+    height: 100%;
+    /* background: url(img/big-sky-img1.jpg) no-repeat;*/
+    background-size: cover;
+    background-color: rgb(244, 244, 244, 0.5)
+}
+
+.section2 {
+    height: 100%;
+    /* background: url(img/subtle_white_feathers.png);*/
+    background-color: rgb(244, 244, 244, 0.5)
+}
+
+.section3 {
+    height: 100%;
+    /*  background: url(img/big-sky-img2.jpg) bottom center no-repeat;*/
+    background-size: cover;
+    background-color: rgb(244, 244, 244, 0.5)
+}
+
+.section4 {
+    height: 100%;
+    background-color: rgb(244, 244, 244, 0.5)
+}
+
+.section5 {
+    position: relative;
+    z-index: -2;
+    height: 100%;
+    /* background: url(img/big-sky-img3.jpg) no-repeat;*/
+    background-size: cover;
+    background-color: rgb(244, 244, 244, 0.5)
+}
+
+
+
+#page-top {
+    position: relative;
+    padding-top: 2px;
+    transition: .1s;
+    color: #000;
+}
+
+#page-top:hover {
+    animation: page-top-animation .1s ease 0s;
+}
+
+@keyframes page-top-animation {
+    0% {
+        padding-top: 0px;
+    }
+
+    100% {
+        padding-top: 3px;
+    }
+}
+
+@media only screen and (min-width: 1023px) {
+
+    /* .section1,
+.section3,
+.section5 {
+background-attachment: fixed;
+}*/
+}
+
+#menu-wrap {
+    top: 0px;
+    height: 1000px;
+    z-index: -10;
+}

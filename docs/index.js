@@ -14,6 +14,10 @@ $(function () {
   var $year_1 = $('.year_1.unit');
   var $year_2 = $('.year_2.unit');
 
+  var obj = document.getElementById('sentece_1');
+
+
+
   //デフォルトでは状態を表すフラグをfasleにしておく
   var connected = false;//接続状態
   var typing = false;//タイピング状態
@@ -21,8 +25,8 @@ $(function () {
 
   //ウィンドウのリサイズ
   function showWindowSize() {
-    $('#windowHeight').text($(window).height());
-    $('#windowWidth').text($(window).width());
+    /*$('#windowHeight').text($(window).height());
+    $('#windowWidth').text($(window).width());*/
     console.log("ウィンドウ幅" + windowWidth, "ウィンドウ高さ" + windowHeight);
   }
 
@@ -30,14 +34,15 @@ $(function () {
 
   //スクロール
   function scroll() {
-     /*if ($(this).scrollTop() > 100) {
-            $year_1.addClass('BG-BLUE');
-        } else */if ($(this).scrollTop() > 200) {
-      /* $year_1.fadeOut();*/
-      $('block-two').hide().fadeIn(FADE_TIME);
+    if ($(this).scrollTop() > 100) {
+      obj.style.opacity = 0.4;
+    } else if ($(this).scrollTop() > 200) {
+      obj.style.opacity = 0.1;
+
     } else {
       $year_1.removeClass('BG-BLUE');
       $year_2.fadeOut(FADE_TIME);
+      obj.style.opacity = 1;
 
     }
   }
@@ -49,10 +54,7 @@ $(function () {
   $(window).scroll(scroll);
 
   $(document).on('mousemove', (event) => {
-    $('.cursor').css({
-      top: event.clientY,
-      left: event.clientX,
-    });
+
   });
 
 

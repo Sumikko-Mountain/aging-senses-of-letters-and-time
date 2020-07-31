@@ -50,12 +50,18 @@
 
     #scroll-contents {
         height: 700px;
+        background-color: #5892bb;
     }
 </style>
 
 <script>
     $('#scroll-box').scroll(function () {
         $('#scroll-amount').text($(this).scrollTop() + 'px');
+        var changeOpacity = $(this).scrollTop() * 0.0015
+        console.log(changeOpacity);
+        var obj = document.getElementById("scroll-contents");
+        obj.style.opacity = changeOpacity;
+
     });
 </script>
 
