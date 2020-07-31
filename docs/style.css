@@ -43,18 +43,46 @@ li{
 
 .wrapper{
   max-width:1000px;
-  margin: 30px 500px;
+  margin: 0 auto;
+  padding: 0 60px;
+ 
 }
 
   .BG-BLUE {
     background-color: #40b7ff;
   }
 
+  .unit{
+    text-align:center;
+  }
 
   .year_1{
-height:2000px;
+    font-size:32pt;
+min-height:500px;
+position:relative;
+background-color:#40b7ff;
+opacity:0.5;
+position:-webkit-sticky;
+ position:sticky; 
+ top:0;
+
+  }
+  p.year_1{
+
   }
   .year_2{
     display:none;
-    height:2000px;
+    font-size:28pt;
+    min-height:400px;
+    background-color:#3fd388;
+ top:-130;
+  }
+
+  .main-content{
+    min-height:1000px;
+  }
+
+  .testUnit{
+    height:500px;
+    background-color:transparent;
   }

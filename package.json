@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Sumikko-Mountain/aging-senses-of-letters-and-time#readme",
   "dependencies": {
-    "destyle.css": "^1.0.13"
+    "destyle.css": "^1.0.13",
+    "tornis": "^0.3.2"
   }
 }
