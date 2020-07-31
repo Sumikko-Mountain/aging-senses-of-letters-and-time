@@ -15,11 +15,12 @@ $(function () {
   var $year_2 = $('.year_2.unit');
 
   var obj = document.getElementById('sentece_1');
-  //var obj2 = document.getElementById('sentece_2');
+  var obj2 = document.getElementById('sentece_2');
   var $obj2 = $('#sentece_2');
   var obj3 = document.getElementById('sentece_3');
   var obj4 = document.getElementById('sentece_4');
   var obj5 = document.getElementById('sentece_5');
+  var obj6 = document.getElementById('sentece_6');
 
 
 
@@ -34,6 +35,8 @@ $(function () {
   function showWindowSize() {
     /*$('#windowHeight').text($(window).height());
     $('#windowWidth').text($(window).width());*/
+    windowWidth = window.innerWidth;//スクロールバーを含んだ値で画面サイズを取得
+    windowHeight = window.innerHeight;
     console.log("ウィンドウ幅" + windowWidth, "ウィンドウ高さ" + windowHeight);
   }
 
@@ -41,29 +44,32 @@ $(function () {
 
   //スクロール
   function scroll() {
-    /* var clientRect = $obj2.getBoundingClientRect();
-     var y = clientRect.top;
-     console.log(y);*/
-    if ($(this).scrollTop() > windowHeight * 4) {
+    var clientRect = obj2.getBoundingClientRect();
+    var y = clientRect.top;
+
+    console.log(y, $obj2.offset().top);
+    if ($(this).scrollTop() >= windowHeight * 5) {
+      obj6.style.opacity = 1.0;
+      obj5.style.opacity = 0.0;
+      console.log("sentence_6");
+    } else if ($(this).scrollTop() >= windowHeight * 4) {
       obj5.style.opacity = 1.0;
       obj4.style.opacity = 0.0;
-      console.log("sentence_4");
-    } else if ($(this).scrollTop() > windowHeight * 3) {
+      console.log("sentence_5");
+    } else if ($(this).scrollTop() >= windowHeight * 3) {
       obj4.style.opacity = 1.0;
       obj3.style.opacity = 0.0;
-      console.log("sentence_3");
-    } else if ($(this).scrollTop() > windowHeight * 2) {
+      console.log("sentence_4");
+    } else if ($(this).scrollTop() >= windowHeight * 2) {
       obj3.style.opacity = 1.0;
-      $obj2.fadeOut(FADE_TIME);
-      console.log("sentence_2");
-    } else if ($(this).scrollTop() > windowHeight) {
-      $obj2.hide().fadeIn(FADE_TIME);
+      obj2.style.opacity = 0.0;
+      console.log("sentence_3");
+    } else if ($(this).scrollTop() >= windowHeight) {
+      obj2.style.opacity = 1.0;
       obj.style.opacity = 0.0;
-      console.log("sentence_1");
+      console.log("sentence_2");
     } else {
-      $year_1.removeClass('BG-BLUE');
-      $year_2.fadeOut(FADE_TIME);
-
+      console.log("sentence_1");
       obj.style.opacity = 1.0;
     }
   }
