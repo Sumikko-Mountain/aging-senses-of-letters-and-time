@@ -22,23 +22,6 @@ html, body {
 }
 
 
-ul {
-  list-style: none;
-  word-wrap: break-word;
-}
-
-li{
-  list-style: none;
- 
-}
-a,
-a:visited {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-
 .wrapper{
   max-width:1000px;
   margin: 0 auto;
@@ -46,58 +29,46 @@ a:visited {
  
 }
 
-  .BG-BLUE {
-    background-color: #40b7ff;
-  }
-
-  .unit{
-    text-align:center;
-  }
-
-  .year_1{
-    font-size:32pt;
-min-height:500px;
-position:relative;
-background-color:#40b7ff;
-opacity:0.5;
-position:-webkit-sticky;
- position:sticky; 
- top:0;
-
-  }
-
-  .year_2{
-    display:none;
-    font-size:28pt;
-    min-height:400px;
-    background-color:#3fd388;
- top:-130;
-  }
-
-  .main-content{
-    min-height:1000px;
-  }
-
-.block-one{
-  /*background:rgb(130,190,250,0.9);*/
+a,
+a:visited {
+    color: #fff;
+    text-decoration: none;
 }
+
+
+#defaultCanvas0{
+  position: fixed;
+  top: 0; 
+}
+
+
+
   .block {
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+    align-items: center;/*高さを真ん中にする*/
+    justify-content: center;/*左右を真ん中にする*/
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    text-align:center;
    /* background: #fff;*/
   }
 
   .block > p{
-    display: inline-block;
+   
    /* writing-mode: vertical-rl;/*縦書きにする*/
     padding: 0;
     margin: 0;
+   
+  }
+  p{
+    display: inline-block;
+   /* writing-mode: vertical-rl;/*縦書きにする*/
+  }
+  .sentence{
+ 
   }
 
   .fadeIn {
@@ -108,164 +79,5 @@ position:-webkit-sticky;
     opacity: 0;
     transition: all 0.1s ease;
   }
-  .target{
-    height:600px;
-    background-color:#4bafd4;
-  }
-
-  .non-target{
-    height:600px;
-  }
-
-  .block-one{
-
-  }
-  .sentence{
-    
-  }
-
-  .effect i {
-    height: 120px;
-    padding: 20px;
-    font-size: 100px;
-    transition: .8s;
-  } 
-  .effect div {
-    margin: auto;
-    transition: .8s;
-    transition-delay: .8s;
-  }
 
 
-
-
-
-      
-
-  .cover {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: #000;
-    font-size: 30pt;
-
-    
-}
-
-.centerBoxFix {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    height: 20px;
-    line-height: 160%;
-    text-align: center;
-}
-
-.centerBoxLast {
-    z-index: -1;
-}
-
-.centerBox {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 80%;
-    height: 200px;
-    line-height: 160%;
-    text-align: center;
-  
-}
-
-
-
-.centerBox div {
-    margin: auto;
-    transition: .8s;
-    /* transition-delay: .8s;*/
-}
-
-.centerBox p {
-    margin: auto;
-    transition: .8s;
-    /* transition-delay: .8s;*/
-}
-
-.section1 {
-    height: 100%;
-    /* background: url(img/big-sky-img1.jpg) no-repeat;*/
-    background-size: cover;
-    background-color: rgb(244, 244, 244, 0.5)
-}
-
-.section2 {
-    height: 100%;
-    /* background: url(img/subtle_white_feathers.png);*/
-    background-color: rgb(244, 244, 244, 0.5)
-}
-
-.section3 {
-    height: 100%;
-    /*  background: url(img/big-sky-img2.jpg) bottom center no-repeat;*/
-    background-size: cover;
-    background-color: rgb(244, 244, 244, 0.5)
-}
-
-.section4 {
-    height: 100%;
-    background-color: rgb(244, 244, 244, 0.5)
-}
-
-.section5 {
-    position: relative;
-    z-index: -2;
-    height: 100%;
-    /* background: url(img/big-sky-img3.jpg) no-repeat;*/
-    background-size: cover;
-    background-color: rgb(244, 244, 244, 0.5)
-}
-
-
-
-#page-top {
-    position: relative;
-    padding-top: 2px;
-    transition: .1s;
-    color: #000;
-}
-
-#page-top:hover {
-    animation: page-top-animation .1s ease 0s;
-}
-
-@keyframes page-top-animation {
-    0% {
-        padding-top: 0px;
-    }
-
-    100% {
-        padding-top: 3px;
-    }
-}
-
-@media only screen and (min-width: 1023px) {
-
-    /* .section1,
-.section3,
-.section5 {
-background-attachment: fixed;
-}*/
-}
-
-#menu-wrap {
-    top: 0px;
-    height: 1000px;
-    z-index: -10;
-}

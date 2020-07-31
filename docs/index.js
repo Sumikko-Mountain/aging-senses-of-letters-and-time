@@ -21,6 +21,7 @@ $(function () {
   var obj4 = document.getElementById('sentece_4');
   var obj5 = document.getElementById('sentece_5');
   var obj6 = document.getElementById('sentece_6');
+  var emp1 = document.getElementById('empty_1');
 
 
 
@@ -48,28 +49,37 @@ $(function () {
     var y = clientRect.top;
 
     console.log(y, $obj2.offset().top);
-    if ($(this).scrollTop() >= windowHeight * 5) {
+    if ($(this).scrollTop() >= windowHeight * 6) {
       obj6.style.opacity = 1.0;
       obj5.style.opacity = 0.0;
       console.log("sentence_6");
-    } else if ($(this).scrollTop() >= windowHeight * 4) {
+    } else if ($(this).scrollTop() >= windowHeight * 5) {
+      obj6.style.opacity = 0.0;
       obj5.style.opacity = 1.0;
       obj4.style.opacity = 0.0;
       console.log("sentence_5");
     } else if ($(this).scrollTop() >= windowHeight * 3) {
+      obj5.style.opacity = 0.0;
       obj4.style.opacity = 1.0;
-      obj3.style.opacity = 0.0;
+      /* obj3.style.opacity = 0.0;*/
       console.log("sentence_4");
     } else if ($(this).scrollTop() >= windowHeight * 2) {
+      obj4.style.opacity = 0.0;
       obj3.style.opacity = 1.0;
       obj2.style.opacity = 0.0;
       console.log("sentence_3");
     } else if ($(this).scrollTop() >= windowHeight) {
+      obj3.style.opacity = 0.0;
       obj2.style.opacity = 1.0;
       obj.style.opacity = 0.0;
       console.log("sentence_2");
     } else {
       console.log("sentence_1");
+      obj6.style.opacity = 0.0;
+      obj5.style.opacity = 0.0;
+      obj4.style.opacity = 0.0;
+      obj3.style.opacity = 0.0;
+      obj2.style.opacity = 0.0;
       obj.style.opacity = 1.0;
     }
   }
@@ -193,3 +203,13 @@ $(function () {
 
 
 });
+
+
+function setup() {
+  var canvas = createCanvas(windowWidth, windowHeight, P2D);
+  canvas.style('z-index', '-1');//キャンバスを背景にする
+  background(255);
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
