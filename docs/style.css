@@ -44,6 +44,8 @@ a:visited {
 
 .block{/*文章が画面いっぱいに詰まりすぎないように*/
   padding:100px 0px;
+  word-wrap: break-word;
+
 }
   /*縦書きセクション用*/
  .vertical .block {
@@ -106,14 +108,30 @@ a:visited {
   }
 
   .block-1{
-    font-size:24pt;
+    font-size:30pt;
   }
 
   .block-2{
-    font-size:22pt;
+    font-size:28pt;
   }
 
   .block-3{
-    font-size:20pt;
+    font-size:26pt;
+  }
+
+  .block-4{
+    font-size:24pt;
+  }
+
+  .block-5{
+    font-size:22pt;
+  }
+
+  .block-6{
+    font-size:22pt;
+  }
+
+  .block-7{
+    font-size:18pt;
   }
 
