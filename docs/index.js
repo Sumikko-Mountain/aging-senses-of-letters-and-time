@@ -34,13 +34,17 @@ $(function () {
             $year_1.addClass('BG-BLUE');
         } else */if ($(this).scrollTop() > 200) {
       /* $year_1.fadeOut();*/
-      $year_2.fadeIn(FADE_TIME);
+      $('block-two').hide().fadeIn(FADE_TIME);
     } else {
       $year_1.removeClass('BG-BLUE');
       $year_2.fadeOut(FADE_TIME);
 
     }
   }
+
+  $('.block-one').scroll(function () {
+    console.log($(this).scrollTop() + 'px');
+  });
 
   $(window).scroll(scroll);
 
@@ -51,12 +55,7 @@ $(function () {
     });
   });
 
-  $(function () {
-    $('.wrap').stickyStack({
-      containerElement: '.wrap',
-      stackingElement: 'div',
-    });
-  })
+
   /*
  
   // Sets the client's username　ユーザー名のセット

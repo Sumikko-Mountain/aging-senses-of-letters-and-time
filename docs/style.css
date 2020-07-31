@@ -67,9 +67,7 @@ position:-webkit-sticky;
  top:0;
 
   }
-  p.year_1{
 
-  }
   .year_2{
     display:none;
     font-size:28pt;
@@ -82,7 +80,42 @@ position:-webkit-sticky;
     min-height:1000px;
   }
 
-  .testUnit{
-    height:500px;
-    background-color:transparent;
+
+  .block {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #fff;
+  }
+
+  .block > p{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fadeIn {
+    opacity: 1.0;
+    transition: all 2s ease;
+  }
+  .fadeOut {
+    opacity: 0;
+    transition: all 0.1s ease;
+  }
+  .target{
+    height:600px;
+    background-color:#4bafd4;
+  }
+
+  .non-target{
+    height:600px;
+  }
+
+  .block-one{
+    overflow: scroll;
   }
