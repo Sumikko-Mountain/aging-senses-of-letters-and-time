@@ -104,7 +104,7 @@ $(function () {
   
       });*/
 
-    $('.block div, .effect p').css("block", "0");//エフェクトクラスのついたdivの子要素のdivとp
+    $('.block div, .effect p').css("opacity", "0");//エフェクトクラスのついたdivの子要素のdivとp
     $(window).scroll(function () {
         divs_block.forEach((div, i) => {
 

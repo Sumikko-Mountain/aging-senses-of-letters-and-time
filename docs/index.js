@@ -58,71 +58,54 @@ $(function () {
 
 
     if ($(this).scrollTop() >= windowHeight * 12) {
-      obj14.style.opacity = 0.0;
+      obj14.style.opacity = 0.5;
       obj13.style.opacity = 1.0;
       obj12.style.opacity = 0.0;
-      console.log("sentence-6");
     } else if ($(this).scrollTop() >= windowHeight * 11) {
-      obj13.style.opacity = 0.0;
+      obj13.style.opacity = 0.5;
       obj12.style.opacity = 1.0;
       obj11.style.opacity = 0.0;
-      console.log("sentence-6");
     } else if ($(this).scrollTop() >= windowHeight * 10) {
-      obj12.style.opacity = 0.0;
+      obj12.style.opacity = 0.5;
       obj11.style.opacity = 1.0;
       obj10.style.opacity = 0.0;
-      console.log("sentence-6");
     } else if ($(this).scrollTop() >= windowHeight * 9) {
       obj11.style.opacity = 0.5;
       obj10.style.opacity = 1.0;
       obj9.style.opacity = 0.0;
-      console.log("sentence-6");
     } else if ($(this).scrollTop() >= windowHeight * 8) {
       obj10.style.opacity = 0.5;
       obj9.style.opacity = 1.0;
       obj8.style.opacity = 0.0;
-      console.log("sentence-6");
     } else if ($(this).scrollTop() >= windowHeight * 7) {
       obj9.style.opacity = 0.5;
       obj8.style.opacity = 1.0;
       obj7.style.opacity = 0.0;
-      console.log("sentence-6");
     } else if ($(this).scrollTop() >= windowHeight * 6) {
       obj8.style.opacity = 0.5;
       obj7.style.opacity = 1.0;
       obj6.style.opacity = 0.0;
-      console.log("sentence-6");
     } else if ($(this).scrollTop() >= windowHeight * 5) {
       obj7.style.opacity = 0.5;
       obj6.style.opacity = 1.0;
       obj5.style.opacity = 0.0;
-      console.log("sentence-6");
     } else if ($(this).scrollTop() >= windowHeight * 4) {
       obj6.style.opacity = 0.5;
       obj5.style.opacity = 1.0;
       obj4.style.opacity = 0.0;
-      console.log("sentence-5");
     } else if ($(this).scrollTop() >= windowHeight * 3) {
       obj5.style.opacity = 0.5;
       obj4.style.opacity = 1.0;
       obj3.style.opacity = 0.0;
-      console.log("sentence-4");
     } else if ($(this).scrollTop() >= windowHeight * 2) {
       obj4.style.opacity = 0.5;
       obj3.style.opacity = 1.0;
       obj2.style.opacity = 0.0;
-      console.log("sentence-3");
     } else if ($(this).scrollTop() >= windowHeight) {
       obj3.style.opacity = 0.5;
       obj2.style.opacity = 1.0;
       obj1.style.opacity = 0.0;
-      console.log("sentence-2");
     } else {
-      console.log("sentence-1");
-      obj6.style.opacity = 0.0;
-      obj5.style.opacity = 0.0;
-      obj4.style.opacity = 0.0;
-      obj3.style.opacity = 0.0;
       obj2.style.opacity = 0.0;
       obj1.style.opacity = 1.0;
     }
