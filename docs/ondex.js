@@ -59,8 +59,8 @@ $(function () {
 
     }
 
-    //const divs = document.querySelectorAll('.sentence');
-    const divs_block = document.querySelectorAll('.block');
+    const divs = document.querySelectorAll('.sentence');
+    //const divs_block = document.querySelectorAll('.block');
 
     /* $(window).scroll(function () {
   
@@ -84,28 +84,29 @@ $(function () {
 
     // $('.sentence div, .sentence p').css("opacity", "0");//エフェクトクラスのついたdivの子要素のdivとp
     //$('.block div').css("opacity", "0");
-    /*  divs.forEach((div, i) => {
-          console.log(div);
-          $(window).scroll(function () {
-              var scroll = $(window).scrollTop();
-              //console.log(div, scroll);
-              //console.log("imgPos：" + imgPos, "scroll：" + scroll);
-              if (scroll >= windowHeight * i && scroll < windowHeight * (i + 1)) {
-                  console.log("in if");
-                  //$('.block div').css("opacity", "1");
-                  $(this).css("opacity", "1");
-              } else {
-                  console.log("in else");
-                  //$('.block div').css("opacity", "0");
-                  $(this).css("opacity", "0");
-              }
-          });
-  
-  
-      });*/
+    divs.forEach((div, i) => {
+        console.log(div);
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            //console.log(div, scroll);
+            //console.log("imgPos：" + imgPos, "scroll：" + scroll);
+            if (scroll >= windowHeight * i && scroll < windowHeight * (i + 1)) {
+                console.log("in if");
+                //$('.block div').css("opacity", "1");
+                div.style.opacity = 1.0;
+            } else {
+                console.log("in else");
+                //$('.block div').css("opacity", "0");
+                div.style.opacity = 0.0;
+            }
+        });
 
-    $('.block div, .effect p').css("opacity", "0");//エフェクトクラスのついたdivの子要素のdivとp
-    $(window).scroll(function () {
+
+    });
+
+
+    //$('.block div, .block p').css("opacity", "0");//エフェクトクラスのついたdivの子要素のdivとp
+    /*$(window).scroll(function () {
         divs_block.forEach((div, i) => {
 
             var scroll = $(window).scrollTop();
@@ -121,7 +122,7 @@ $(function () {
             }
 
         });
-    });
+    });*/
 
 
 
