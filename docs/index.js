@@ -39,7 +39,7 @@ $(function () {
         div.style.opacity = 0.1;
       } else {
         // console.log("in else");
-        if (i != divs_section1.length - 1) {//最後の一つは消えないようにして、見えてる状態で上に送る
+        if (i != divs_section1.length - 1) {//最後の一つは消えないようにして、見えてる状態で上に送る iは０から加算さレてるので配列長と一つずれてる
           div.style.opacity = 0.0;
         }
 
@@ -48,7 +48,7 @@ $(function () {
   });
 
   const divs_section2 = document.querySelectorAll('.section-2');
-  allSectionDivs += 1;//section間のdiv分の高さを追加
+  allSectionDivs += 1;//section間の余白ようdiv１つ分の高さを追加
   //allSectionDivs += divs_section2.length;
   console.log(divs_section2, divs_section2.length, allSectionDivs);
   divs_section2.forEach((div, i) => {

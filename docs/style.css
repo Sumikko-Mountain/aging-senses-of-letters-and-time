@@ -95,7 +95,7 @@ a:visited {
 
   
   .sentence{
- 
+    word-wrap: break-word;
   }
 
   .fadeIn {
@@ -107,6 +107,7 @@ a:visited {
     transition: all 0.1s ease;
   }
 
+  /*年代ごとの文字サイズ調整*/
   .block-1{
     font-size:30pt;
   }
