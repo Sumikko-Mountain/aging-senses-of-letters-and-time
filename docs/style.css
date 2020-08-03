@@ -84,8 +84,10 @@ a:visited {
   .vertical .block .sentence> p{
    display: inline-block;
    writing-mode: vertical-rl;/*縦書きにする*/
+   /*writing-mode: tb-lr;/*IE用*/
     padding: 0 8px;
     margin: 0;
+    max-height:calc(100vh-200px);
   }
 
   .horizontal .block .sentence> p{
