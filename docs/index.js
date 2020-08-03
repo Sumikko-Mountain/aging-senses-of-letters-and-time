@@ -37,7 +37,7 @@ $(function () {
       } else if (scroll >= windowHeight * (i - 1) && scroll < windowHeight * i) {
         //可視範囲に下から入ってきて真ん中に到達するまで
         // console.log("in else if");
-        div.style.opacity = 0.1;
+        div.style.opacity = 0.3;
       } else {
         //それ以外では見せない
         // console.log("in else");
@@ -64,10 +64,10 @@ $(function () {
         div.style.opacity = 1.0;
       } else if (scroll >= windowHeight * (i + allSectionDivs - 1) && scroll < windowHeight * (i + allSectionDivs)) {
         console.log("in else if");
-        if (i < divs_section2.length - 5) {
-          div.style.opacity = 0.5;
+        if (i < divs_section2.length - 11) {//登ってくるとき見えないブロックの数分ひく
+          div.style.opacity = 0.2;
         }
-        if (i == divs_section2.length - 1) {
+        if (i == divs_section2.length - 1) {//次のelseで最後の一つだけ残るように処理しているので登ってくる時は見えないように
           div.style.opacity = 0.0;
         }
       } else {
@@ -96,7 +96,7 @@ $(function () {
       } else if (scroll >= windowHeight * (i + allSectionDivs_2 - 1) && scroll < windowHeight * (i + allSectionDivs_2)) {
         console.log("in else if");
 
-        div.style.opacity = 0.5;
+        div.style.opacity = 0.1;
 
       } else {
         console.log("in else");
@@ -108,6 +108,15 @@ $(function () {
     });
   });
 
+  if (window.scrollY > windowHeight * 24) {
+    boardFlg = true;
+    if (boardFlg != boardFlg_before) {
+      //background(130, 180, 110);
+      canvas.style('z-index', '2');
+      console.log("canvas forward");
+    }
+
+  }
 
 });//$(function () のけつ
 
@@ -117,18 +126,19 @@ var boardFlg_before = false;
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight, P2D);
   canvas.style('z-index', '-1');//キャンバスを背景にする
-  //background(255);
+  background(255, 10);
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-/*
+
 function draw() {
 
-  if (window.scrollY > windowHeight * 16) {
+  if (window.scrollY > windowHeight * 24) {
     boardFlg = true;
     if (boardFlg != boardFlg_before) {
-      background(130, 180, 110);
+      //background(130, 180, 110);
+      console.log("canvas forward");
     }
 
   }
@@ -136,9 +146,9 @@ function draw() {
 }
 
 function mouseDragged() {
-  if (window.scrollY > windowHeight * 16) {
+  if (window.scrollY > windowHeight * 24) {
     noStroke();
     fill(130, 180, 110);
     ellipse(mouseX, mouseY, 10, 10);
   }
-}*/
+}
