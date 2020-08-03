@@ -73,13 +73,14 @@ a:visited {
     height: 100vh;
    
   display: flex;
-    align-items: center;/*高さを真ん中にする*/
+   /* align-items: center;/*高さを真ん中にする*/
    /* justify-content: center;/*左右を真ん中にする*/
     right:40px;
+    padding:100px 0;
     position: -webkit-sticky;
     position: sticky;
     top: 0;/*これが０じゃなくなると崩壊する*/
-  text-align:center; 
+  /*text-align:center; */
   }
 
 
@@ -93,8 +94,8 @@ a:visited {
   }
 
   .horizontal .block .sentence> p{
-    display: inline-block;
-     padding: 0 8px;
+   /* display: inline-block;*/
+     padding: 0 8px 8px 0;
      margin: 0;
      /*max-width:80vh; なくて十分だった*/
    }

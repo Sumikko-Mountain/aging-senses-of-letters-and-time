@@ -90,7 +90,9 @@ $(function () {
         div.style.opacity = 1.0;
       } else if (scroll >= windowHeight * (i + allSectionDivs_2 - 1) && scroll < windowHeight * (i + allSectionDivs_2)) {
         console.log("in else if");
-        div.style.opacity = 0.5;
+        /* if (i < divs_section3.length - 4) {
+           div.style.opacity = 0.5;
+         }*/
       } else {
         console.log("in else");
         if (i != divs_section3.length - 1) {
@@ -105,11 +107,33 @@ $(function () {
 });//$(function () のけつ
 
 
+var boardFlg = false;
+var boardFlg_before = false;
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight, P2D);
   canvas.style('z-index', '-1');//キャンバスを背景にする
-  background(255);
+  //background(255);
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+/*
+function draw() {
+
+  if (window.scrollY > windowHeight * 16) {
+    boardFlg = true;
+    if (boardFlg != boardFlg_before) {
+      background(130, 180, 110);
+    }
+
+  }
+  boardFlg_before = boardFlg;
+}
+
+function mouseDragged() {
+  if (window.scrollY > windowHeight * 16) {
+    noStroke();
+    fill(130, 180, 110);
+    ellipse(mouseX, mouseY, 10, 10);
+  }
+}*/
