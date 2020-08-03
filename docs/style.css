@@ -43,7 +43,7 @@ a:visited {
 
 
 .block{/*文章が画面いっぱいに詰まりすぎないように*/
-  padding:100px 0px;
+ /* padding:100px 0px;/*縦書きが言うこと聞かないことが多い*/
   word-wrap: break-word;
 
 }
@@ -66,6 +66,7 @@ a:visited {
  /*縦書きにするのをこっちにかくとよくない*/
   }
 
+
   /*横書きセクション用*/
   .horizontal .block {
     width: 100%;
@@ -81,26 +82,31 @@ a:visited {
   text-align:center; 
   }
 
+
   .vertical .block .sentence> p{
    display: inline-block;
    writing-mode: vertical-rl;/*縦書きにする*/
    /*writing-mode: tb-lr;/*IE用*/
     padding: 0 8px;
     margin: 0;
-    max-height:calc(100vh-200px);
+    max-height:80vh;
   }
 
   .horizontal .block .sentence> p{
     display: inline-block;
      padding: 0 8px;
      margin: 0;
+     /*max-width:80vh; なくて十分だった*/
    }
 
   
+
   .sentence{
     word-wrap: break-word;
     /*padding:100px 0px;*/
   }
+
+
 
   .fadeIn {
     opacity: 1.0;
