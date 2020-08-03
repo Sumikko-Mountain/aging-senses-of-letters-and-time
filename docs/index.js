@@ -64,7 +64,12 @@ $(function () {
         div.style.opacity = 1.0;
       } else if (scroll >= windowHeight * (i + allSectionDivs - 1) && scroll < windowHeight * (i + allSectionDivs)) {
         console.log("in else if");
-        div.style.opacity = 0.5;
+        if (i < divs_section2.length - 5) {
+          div.style.opacity = 0.5;
+        }
+        if (i == divs_section2.length - 1) {
+          div.style.opacity = 0.0;
+        }
       } else {
         console.log("in else");
         if (i != divs_section2.length - 1) {
@@ -90,9 +95,9 @@ $(function () {
         div.style.opacity = 1.0;
       } else if (scroll >= windowHeight * (i + allSectionDivs_2 - 1) && scroll < windowHeight * (i + allSectionDivs_2)) {
         console.log("in else if");
-        /* if (i < divs_section3.length - 4) {
-           div.style.opacity = 0.5;
-         }*/
+
+        div.style.opacity = 0.5;
+
       } else {
         console.log("in else");
         if (i != divs_section3.length - 1) {
