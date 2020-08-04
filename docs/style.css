@@ -146,27 +146,34 @@ a:visited {
   }
 
   .block-6{
-    font-size:22pt;
+    font-size:20pt;
   }
 
-  .block-7{
-    font-size:18pt;
-  }
-
-
+ 
 
   .block-9{
-    font-size:16pt;
+    font-size:18pt;
   }
   .block-10{
-    font-size:15pt;
+    font-size:17pt;
   }
   .block-11{
-    font-size:14pt;
+    font-size:16pt;
   }
   .block-12{
-    font-size:13pt;
+    font-size:15pt;
   }
   .block-13{
-    font-size:13pt;
+    font-size:14pt;
   }
+
+  .block-16{
+    font-size:12pt;
+  }
+
+  .combine {
+    -webkit-text-combine: horizontal; /* 実装済 */
+    -moz-text-combine-upright: all; /* 実装済(Firefox nightly 版) */
+    -ms-text-combine-horizontal: all; /* 実装済 */
+    text-orientation: all;
+    }

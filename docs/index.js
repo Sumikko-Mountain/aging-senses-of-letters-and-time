@@ -64,7 +64,7 @@ $(function () {
       if (scroll >= windowHeight * (i + allSectionDivs) && scroll < windowHeight * (i + allSectionDivs + 1)) {
         div.style.opacity = 1.0;
       } else if (scroll >= windowHeight * (i + allSectionDivs - 1) && scroll < windowHeight * (i + allSectionDivs)) {
-        if (i < divs_section2.length - 11) {//登ってくるとき見えないブロックの数分ひく
+        if (i < divs_section2.length - 12) {//登ってくるとき見えないブロックの数分ひく
           div.style.opacity = 0.2;
         }
         if (i == divs_section2.length - 1) {//次のelseで最後の一つだけ残るように処理しているので登ってくる時は見えないように
@@ -105,7 +105,7 @@ $(function () {
     });
 
     $(window).scroll(function () {
-      if (window.scrollY > windowHeight * 24) {
+      if (window.scrollY > windowHeight * 40) {
         boardFlg = true;
         if (boardFlg != boardFlg_before) {
 
@@ -122,7 +122,7 @@ $(function () {
   var boardFlg = false;
   var boardFlg_before = false;
 
-
+  //黒板
   var sketch1 = function (p) {
     p.setup = function () {
       p.createCanvas(windowWidth, windowHeight);
@@ -153,8 +153,8 @@ $(function () {
     p.mouseDragged = function () {
       if (boardFlg == true) {
 
-        p.fill(16, 92, 56);
-        p.ellipse(p.mouseX, p.mouseY, 10, 10);
+        p.fill(16, 92, 56, 100);
+        p.rect(p.mouseX, p.mouseY, 50, 30);
       }
     }
   };
@@ -162,41 +162,11 @@ $(function () {
   new p5(sketch1, "canvasContainer1");
   new p5(sketch2, "canvasContainer2");
 
+
+
+
+
+
 });//$(function () のけつ
 
 
-
-
-
-
-/*function setup() {
-  var canvas1 = createCanvas(windowWidth, windowHeight, P2D);
-  var canvas2 = createCanvas(windowWidth, windowHeight, P2D);
-  canvas1.parent('canvasContainer1');
-  canvas2.parent('canvasContainer2');
-  canvas1.style('z-index', '-1');//キャンバスを背景にする
-  canvas2.style('z-index', '-1');//キャンバスを背景にする
-  background(215, 100);
-}
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
-function draw() {
-
-
-  if (boardFlg != boardFlg_before) {
-    background("#105c38");
-
-  }
-  boardFlg_before = boardFlg;
-}
-
-
-function mouseDragged() {
-  if (window.scrollY > windowHeight * 24) {
-    noStroke();
-    fill(130, 180, 110);
-    ellipse(mouseX, mouseY, 10, 10);
-  }
-}*/
