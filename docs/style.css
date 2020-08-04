@@ -51,7 +51,8 @@ a:visited {
 .block{/*文章が画面いっぱいに詰まりすぎないように*/
  /* padding:100px 0px;/*縦書きが言うこと聞かないことが多い*/
   word-wrap: break-word;
-
+  position: -webkit-sticky;
+  position: sticky;
 }
   /*縦書きセクション用*/
  .vertical .block {
@@ -62,14 +63,15 @@ a:visited {
     /*justify-content: center;/*左右を真ん中にする*/
     justify-content: flex-end;/*左右を右寄せにする*/
     right:40px;
-    position: -webkit-sticky;
-    position: sticky;
+ 
+    
     top: 0;/*これが０じゃなくなると崩壊する*/
     /*flex-direction: row-reverse;これ指定しても左によるだけだった*/
   /* text-align:center;*/
   text-align: left;
    /* background: #fff;*/
  /*縦書きにするのをこっちにかくとよくない*/
+ writing-mode: vertical-rl;
   }
 
 
@@ -83,16 +85,15 @@ a:visited {
    /* justify-content: center;/*左右を真ん中にする*/
     right:40px;
     padding:100px 0;
-    position: -webkit-sticky;
-    position: sticky;
+    
     top: 0;/*これが０じゃなくなると崩壊する*/
   /*text-align:center; */
   }
 
 
   .vertical .block .sentence> p{
-   display: inline-block;
-   writing-mode: vertical-rl;/*縦書きにする*/
+  /* display: inline-block;*/
+   /*writing-mode: vertical-rl;/*縦書きにする*/
    /*writing-mode: tb-lr;/*IE用*/
     padding: 0 8px;
     margin: 0;
@@ -103,6 +104,7 @@ a:visited {
   .horizontal .block .sentence> p{
    /* display: inline-block;/*指定していると横に並んじゃう*/
      padding: 0 8px 10px 0;
+     writing-mode: horizontal-tb;
      margin: 0;
      /*max-width:80vh; なくて十分だった*/
      line-height:1.5;
