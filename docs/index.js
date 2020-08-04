@@ -157,6 +157,13 @@ $(function () {
         p.rect(p.mouseX, p.mouseY, 50, 30);
       }
     }
+    p.touchMoved = function () {
+      if (boardFlg == true) {
+
+        p.fill(16, 92, 56, 100);
+        p.rect(p.mouseX, p.mouseY, 50, 30);
+      }
+    }
   };
 
   new p5(sketch1, "canvasContainer1");
