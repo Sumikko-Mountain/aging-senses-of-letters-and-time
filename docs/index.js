@@ -138,6 +138,19 @@ $(function () {
       }
       boardFlg_before = boardFlg;
     };
+    p.canvasSetup = function () {
+
+      if (boardFlg) {
+        p.background(16, 92, 56);
+        console.log("background changed");
+
+      }
+    };
+
+    p.windowResized = function () {
+      p.resizeCanvas(windowWidth, windowHeight);
+      p.canvasSetup();
+    };
   };
 
   var sketch2 = function (p) {
@@ -147,8 +160,9 @@ $(function () {
 
     };
 
-    p.draw = function () {
-
+    p.windowResized = function () {
+      p.resizeCanvas(windowWidth, windowHeight);
+      //p.canvasSetup;
     };
     p.mouseDragged = function () {
       if (boardFlg == true) {
