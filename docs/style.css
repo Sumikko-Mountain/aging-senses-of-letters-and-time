@@ -59,8 +59,8 @@ a:visited {
     width: 100%;
     height: 100vh;
     display: flex;
-   /* align-items: center;/*左右を真ん中にする*/
-  justify-content: center;/*左右を真ん中にする*/
+   /* align-items: center;/*左右位置を真ん中にする*/
+  /*justify-content: center;/*上下位置を真ん中にする*/
     /*justify-content: flex-start;/*startでうわつき、 endで下つき*/
     /*right:40px;*/
  
@@ -111,9 +111,9 @@ a:visited {
 
   
 
-  .sentence{
+   .vertical .block .sentence.sentence{
     word-wrap: break-word;
-   /* padding:100px 0 0 0;*/
+    padding:12% 0 0 0;
     /*padding:100px 0px;*/
   }
 
