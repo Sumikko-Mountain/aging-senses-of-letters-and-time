@@ -10,6 +10,8 @@ $(function () {
 
 
   var emp1 = document.getElementById('empty-1');
+  var $canvas1 = document.getElementById("defaultCanvas0");
+
 
 
   //ウィンドウのリサイズ
@@ -60,10 +62,8 @@ $(function () {
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
       if (scroll >= windowHeight * (i + allSectionDivs) && scroll < windowHeight * (i + allSectionDivs + 1)) {
-        console.log("in if" + i);
         div.style.opacity = 1.0;
       } else if (scroll >= windowHeight * (i + allSectionDivs - 1) && scroll < windowHeight * (i + allSectionDivs)) {
-        console.log("in else if");
         if (i < divs_section2.length - 11) {//登ってくるとき見えないブロックの数分ひく
           div.style.opacity = 0.2;
         }
@@ -71,7 +71,6 @@ $(function () {
           div.style.opacity = 0.0;
         }
       } else {
-        console.log("in else");
         if (i != divs_section2.length - 1) {
           div.style.opacity = 0.0;
         }
@@ -91,32 +90,35 @@ $(function () {
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
       if (scroll >= windowHeight * (i + allSectionDivs_2) && scroll < windowHeight * (i + allSectionDivs_2 + 1)) {
-        console.log("in if" + i);
         div.style.opacity = 1.0;
       } else if (scroll >= windowHeight * (i + allSectionDivs_2 - 1) && scroll < windowHeight * (i + allSectionDivs_2)) {
-        console.log("in else if");
 
         div.style.opacity = 0.1;
 
       } else {
-        console.log("in else");
+
         if (i != divs_section3.length - 1) {
           div.style.opacity = 0.0;
         }
 
       }
     });
+
+    $(window).scroll(function () {
+      if (window.scrollY > windowHeight * 24) {
+        boardFlg = true;
+        if (boardFlg != boardFlg_before) {
+
+          console.log("p color changed");
+          document.getElementById("wrapper").style.color = "#FFFFFF";
+        }
+
+      }
+    });
+
   });
 
-  if (window.scrollY > windowHeight * 24) {
-    boardFlg = true;
-    if (boardFlg != boardFlg_before) {
-      //background(130, 180, 110);
-      canvas.style('z-index', '2');
-      console.log("canvas forward");
-    }
 
-  }
 
 });//$(function () のけつ
 
@@ -124,9 +126,13 @@ $(function () {
 var boardFlg = false;
 var boardFlg_before = false;
 function setup() {
-  var canvas = createCanvas(windowWidth, windowHeight, P2D);
-  canvas.style('z-index', '-1');//キャンバスを背景にする
-  background(255, 10);
+  var canvas1 = createCanvas(windowWidth, windowHeight, P2D);
+  var canvas2 = createCanvas(windowWidth, windowHeight, P2D);
+  canvas1.parent('canvasContainer1');
+  canvas2.parent('canvasContainer2');
+  canvas1.style('z-index', '-1');//キャンバスを背景にする
+  canvas2.style('z-index', '-1');//キャンバスを背景にする
+  background(215, 100);
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
@@ -134,16 +140,14 @@ function windowResized() {
 
 function draw() {
 
-  if (window.scrollY > windowHeight * 24) {
-    boardFlg = true;
-    if (boardFlg != boardFlg_before) {
-      //background(130, 180, 110);
-      console.log("canvas forward");
-    }
+
+  if (boardFlg != boardFlg_before) {
+    background("#105c38");
 
   }
   boardFlg_before = boardFlg;
 }
+
 
 function mouseDragged() {
   if (window.scrollY > windowHeight * 24) {
