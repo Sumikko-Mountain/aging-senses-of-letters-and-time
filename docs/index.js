@@ -105,7 +105,7 @@ $(function () {
     });
 
     $(window).scroll(function () {
-      if (window.scrollY > windowHeight * 30) {
+      if (window.scrollY > windowHeight * 43) {
         boardFlg = true;
         if (boardFlg != boardFlg_before) {
 
@@ -121,6 +121,7 @@ $(function () {
 
   var boardFlg = false;
   var boardFlg_before = false;
+  var fadeCounter = 0;
 
   //黒板
   var sketch1 = function (p) {
@@ -131,9 +132,10 @@ $(function () {
 
     p.draw = function () {
 
-      if (boardFlg != boardFlg_before) {
-        p.background(16, 92, 56);
-        console.log("background changed");
+      if (boardFlg == true && fadeCounter < 256) {
+        fadeCounter += 2;
+        p.background(16, 92, 56, fadeCounter);
+        console.log("background changed" + fadeCounter);
 
       }
       boardFlg_before = boardFlg;
