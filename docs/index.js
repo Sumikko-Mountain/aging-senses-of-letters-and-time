@@ -133,7 +133,7 @@ $(function () {
     p.draw = function () {
 
       if (boardFlg == true && fadeCounter < 256) {
-        fadeCounter += 2;
+        fadeCounter += 4;
         p.background(16, 92, 56, fadeCounter);
         console.log("background changed" + fadeCounter);
 

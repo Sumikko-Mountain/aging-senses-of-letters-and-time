@@ -182,3 +182,6 @@ a:visited {
   /*justify-content: flex-end;効かない*/
   text-indent:  30%;
 }
+.invisible{
+  visibility:hidden
+}
