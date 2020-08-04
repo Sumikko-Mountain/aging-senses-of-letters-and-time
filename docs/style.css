@@ -62,15 +62,11 @@ a:visited {
    /* align-items: center;/*左右位置を真ん中にする*/
   /*justify-content: center;/*上下位置を真ん中にする*/
     /*justify-content: flex-start;/*startでうわつき、 endで下つき*/
-    /*right:40px;*/
- 
-    
     top: 0;/*これが０じゃなくなると崩壊する*/
     /*flex-direction: row-reverse;これ指定しても左によるだけだった*/
   /* text-align:center;*/
   text-align: left;
-   /* background: #fff;*/
- /*縦書きにするのをこっちにかくとよくない*/
+ /*縦書きにするのをこっちにかくとよくないと思っていたけど文章の順番と上ツキを実現するには文章の親要素に書く必要がある*/
  writing-mode: vertical-rl;
   }
 
@@ -83,7 +79,6 @@ a:visited {
   display: flex;
    /* align-items: center;/*高さを真ん中にする*/
    /* justify-content: center;/*左右を真ん中にする*/
-   /* right:40px;*/
     padding:16% 0; 
     top: 0;/*これが０じゃなくなると崩壊する*/
   /*text-align:center; */
@@ -171,7 +166,7 @@ a:visited {
   }
 
   .block-16{
-    font-size:12pt;
+    font-size:13pt;
   }
 
   /*縦中横*/
