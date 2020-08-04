@@ -97,9 +97,9 @@ $(function () {
 
       } else {
 
-        if (i != divs_section3.length - 1) {
-          div.style.opacity = 0.0;
-        }
+        /*   if (i != divs_section3.length - 1) {
+             div.style.opacity = 0.0;
+           }*/
 
       }
     });
