@@ -119,13 +119,57 @@ $(function () {
   });
 
 
+  var boardFlg = false;
+  var boardFlg_before = false;
+
+
+  var sketch1 = function (p) {
+    p.setup = function () {
+      p.createCanvas(windowWidth, windowHeight);
+      p.noStroke();
+    };
+
+    p.draw = function () {
+
+      if (boardFlg != boardFlg_before) {
+        p.background(16, 92, 56);
+        console.log("background changed");
+
+      }
+      boardFlg_before = boardFlg;
+    };
+  };
+
+  var sketch2 = function (p) {
+    p.setup = function () {
+      p.createCanvas(windowWidth, windowHeight);
+      p.noStroke();
+
+    };
+
+    p.draw = function () {
+
+    };
+    p.mouseDragged = function () {
+      if (boardFlg == true) {
+
+        p.fill(16, 92, 56);
+        p.ellipse(p.mouseX, p.mouseY, 10, 10);
+      }
+    }
+  };
+
+  new p5(sketch1, "canvasContainer1");
+  new p5(sketch2, "canvasContainer2");
 
 });//$(function () のけつ
 
 
-var boardFlg = false;
-var boardFlg_before = false;
-function setup() {
+
+
+
+
+/*function setup() {
   var canvas1 = createCanvas(windowWidth, windowHeight, P2D);
   var canvas2 = createCanvas(windowWidth, windowHeight, P2D);
   canvas1.parent('canvasContainer1');
@@ -155,4 +199,4 @@ function mouseDragged() {
     fill(130, 180, 110);
     ellipse(mouseX, mouseY, 10, 10);
   }
-}
+}*/

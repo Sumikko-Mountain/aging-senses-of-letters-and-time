@@ -39,8 +39,14 @@ a:visited {
 #defaultCanvas0{
   position: fixed;
   top: 0; 
+  z-index:-2
 }
 
+#defaultCanvas1{
+  position: fixed;
+  top: 0; 
+  z-index:1;
+}
 
 .block{/*文章が画面いっぱいに詰まりすぎないように*/
  /* padding:100px 0px;/*縦書きが言うこと聞かないことが多い*/
