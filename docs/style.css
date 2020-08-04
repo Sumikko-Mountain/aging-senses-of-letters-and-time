@@ -97,13 +97,15 @@ a:visited {
     padding: 0 8px;
     margin: 0;
     max-height:80vh;
+   line-height:1.5;
   }
 
   .horizontal .block .sentence> p{
-   /* display: inline-block;*/
+   /* display: inline-block;/*指定していると横に並んじゃう*/
      padding: 0 8px 10px 0;
      margin: 0;
      /*max-width:80vh; なくて十分だった*/
+     line-height:1.5;
    }
 
   
