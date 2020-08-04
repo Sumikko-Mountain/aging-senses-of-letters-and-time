@@ -182,7 +182,8 @@ a:visited {
     text-orientation: all;
     }
 
-      /*
+    
 .name{
-  justify-content: flex-end;
-}だめっぽい*/
+  /*justify-content: flex-end;効かない*/
+  text-indent:  30%;
+}
