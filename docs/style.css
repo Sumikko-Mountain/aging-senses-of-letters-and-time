@@ -75,6 +75,7 @@ a:visited {
   }
 
 
+
   /*横書きセクション用*/
   .horizontal .block {
     width: 100%;
@@ -115,7 +116,6 @@ a:visited {
    /* padding:100px 0 0 0;*/
     /*padding:100px 0px;*/
   }
-
 
 
   .fadeIn {
@@ -174,9 +174,15 @@ a:visited {
     font-size:12pt;
   }
 
+  /*縦中横*/
   .combine {
     -webkit-text-combine: horizontal; /* 実装済 */
     -moz-text-combine-upright: all; /* 実装済(Firefox nightly 版) */
     -ms-text-combine-horizontal: all; /* 実装済 */
     text-orientation: all;
     }
+
+      /*
+.name{
+  justify-content: flex-end;
+}だめっぽい*/
