@@ -62,7 +62,11 @@ html, body {
   /* text-align:center;*/
   text-align: left;
  /*縦書きにするのをこっちにかくとよくないと思っていたけど文章の順番と上ツキを実現するには文章の親要素に書く必要がある*/
+ -webkit-writing-mode: vertical-rl;
+-moz-writing-mode: vertical-rl; 
+-ms-writing-mode: vertical-rl; 
  writing-mode: vertical-rl;
+
   }
 
 
