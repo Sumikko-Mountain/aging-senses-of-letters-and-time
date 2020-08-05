@@ -105,7 +105,7 @@ $(function () {
     });
 
     $(window).scroll(function () {
-      if (window.scrollY > windowHeight * 43) {
+      if (window.scrollY > windowHeight * 59) {
         boardFlg = true;
         if (boardFlg != boardFlg_before) {
 

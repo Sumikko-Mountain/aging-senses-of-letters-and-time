@@ -124,49 +124,49 @@ a:visited {
 
   /*年代ごとの文字サイズ調整*/
   .block-1{
-    font-size:30pt;
-  }
-
-  .block-2{
     font-size:28pt;
   }
 
-  .block-3{
+  .block-2{
     font-size:26pt;
   }
 
-  .block-4{
+  .block-3{
     font-size:24pt;
   }
 
-  .block-5{
+  .block-4{
     font-size:22pt;
   }
 
-  .block-6{
+  .block-5{
     font-size:20pt;
+  }
+
+  .block-6{
+    font-size:18pt;
   }
 
  
 
   .block-9{
-    font-size:18pt;
-  }
-  .block-10{
     font-size:17pt;
   }
-  .block-11{
+  .block-10{
     font-size:16pt;
   }
-  .block-12{
+  .block-11{
     font-size:15pt;
   }
-  .block-13{
+  .block-12{
     font-size:14pt;
+  }
+  .block-13{
+    font-size:13pt;
   }
 
   .block-16{
-    font-size:13pt;
+    font-size:12pt;
   }
 
   /*縦中横*/
