@@ -111,9 +111,10 @@ html, body {
    /*縦中横*/
    .combine {
     -webkit-text-combine: horizontal; 
-    text-combine-upright: all;
+    -moz-text-combine-upright: all;/*Firefox 効かない…？*/
     -ms-text-combine-horizontal: all; 
     text-orientation: all;
+    text-combine-upright: all;
     }
 
  /*ここだけ下ツキにしたいのだけど*/   
