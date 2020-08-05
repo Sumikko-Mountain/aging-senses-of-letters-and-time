@@ -131,9 +131,9 @@ html, body {
   visibility:hidden
 }
 
-.section-1{
+/*.section-1{
   text-indent:  1em;
-}
+}/*段落頭字下げしようかと思ったけど激しいのでいいか*/
 
   /*年代ごとの文字サイズ調整*/
   .block-1{
