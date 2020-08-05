@@ -97,6 +97,7 @@ html, body {
      margin: 0;
      /*max-width:80vh; なくて十分だった*/
      line-height:1.5;
+    
    }
 
   
@@ -126,6 +127,9 @@ html, body {
   visibility:hidden
 }
 
+.section-1{
+  text-indent:  1em;
+}
 
   /*年代ごとの文字サイズ調整*/
   .block-1{
