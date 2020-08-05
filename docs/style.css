@@ -111,7 +111,7 @@ html, body {
    /*縦中横*/
    .combine {
     -webkit-text-combine: horizontal; 
-    -moz-text-combine-upright: all; 
+    text-combine-upright: all;
     -ms-text-combine-horizontal: all; 
     text-orientation: all;
     }
