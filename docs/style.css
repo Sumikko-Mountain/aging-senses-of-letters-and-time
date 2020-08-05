@@ -129,59 +129,59 @@ html, body {
 
   /*年代ごとの文字サイズ調整*/
   .block-1{
-    /*font-size:28pt;*/
+    font-size:28pt;
     font-size:2.4vw;
   }
 
   .block-2{
-    /*font-size:26pt;*/
+    font-size:26pt;
     font-size:2.25vw;
   }
 
   .block-3{
-   /* font-size:24pt;*/
+    font-size:24pt;
    font-size:2.1vw;
   }
 
   .block-4{
-    /*font-size:22pt;*/
+    font-size:22pt;
     font-size:1.95vw;
   }
 
   .block-5{
-    /*font-size:20pt;*/
+    font-size:20pt;
     font-size:1.7vw;
   }
 
   .block-6{
-    /*font-size:18pt;*/
+    font-size:18pt;
     font-size:1.55vw;
   }
 
 
   .block-9{
-    /*font-size:17pt;*/
+    font-size:17pt;
     font-size:1.5vw;
   }
   .block-10{
-    /*font-size:16pt;*/
+    font-size:16pt;
     font-size:1.4vw;
   }
   .block-11{
-    /*font-size:15pt;*/
+    font-size:15pt;
     font-size:1.3vw;
   }
   .block-12{
-    /*font-size:14pt;*/
+    font-size:14pt;
     font-size:1.2vw;
   }
   .block-13{
-    /*font-size:13pt;*/
+    font-size:13pt;
     font-size:1.1vw;
   }
 
   .block-16{
-    /*font-size:12pt;*/
+    font-size:12pt;
     font-size:1.2vw;
   }
 
