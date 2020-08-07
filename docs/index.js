@@ -200,4 +200,15 @@ $(function () {
 
 });//$(function () のけつ
 
-
+jQuery(function ($) {
+  $("#open-about").click(function () {
+    $("#overlay").fadeIn();
+  });
+  $(".close").click(function () {
+    $("#overlay").fadeOut();
+  });
+  // バブリングを停止
+  $(".overlay-inner").click(function (event) {
+    event.stopPropagation();
+  });
+});
