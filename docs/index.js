@@ -9,8 +9,7 @@ $(function () {
   $('#windowWidth').text($(window).width());
 
 
-  var emp1 = document.getElementById('empty-1');
-  var $canvas1 = document.getElementById("defaultCanvas0");
+  var $sentence = $('.sentence');
 
 
 
@@ -111,17 +110,26 @@ $(function () {
 
           console.log("p color changed");
           document.getElementById("wrapper").style.color = "#FFFFFF";
+          document.getElementById("footer").classList.remove("displayNone");
+          document.getElementById("footer").classList.add("fade");
+
         }
 
+      }
+      if (boardFlg == true && paddingFlg == false && window.scrollY < windowHeight * 52.5) {
+        /*一番最後まで行ってfooterが表示された分、高校から遡ったらpadding-topを小さくするやや強引だが一番目立たない位置で調整 */
+        $('.sentence').css('padding', '8% 0 0 0');
+        paddingFlg = true;/*一度調整したらそれ以上呼ばないように */
       }
     });
 
   });
 
-
+  var paddingFlg = false;
   var boardFlg = false;
   var boardFlg_before = false;
   var fadeCounter = 0;
+
 
   //黒板
   var sketch1 = function (p) {

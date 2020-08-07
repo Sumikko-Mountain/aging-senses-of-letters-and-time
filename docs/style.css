@@ -78,7 +78,7 @@ html, body {
   display: flex;
    /* align-items: center;/*高さを真ん中にする*/
    /* justify-content: center;/*左右を真ん中にする*/
-    padding:12% 0; 
+   /* padding:8% 0; /*横書きの文章全体の上揃え位置を調整 0%完全に上つきになる*/
     top: 0;/*これが０じゃなくなると崩壊する*/
   /*text-align:center; */
   }
@@ -106,9 +106,9 @@ html, body {
 
   
 
-   .vertical .block .sentence.sentence{
+   /*.vertical .block*/ .sentence{
     word-wrap: break-word;
-    padding:12% 0 0 0;
+    padding:12% 0 0 0;/*縦書きの文章全体の上揃え位置を調整 0%完全に上つきになる　footer追加の関係もあり横書きの指定もこちらで共通制御することに*/
     /*padding:100px 0px;*/
   }
 
@@ -193,4 +193,44 @@ html, body {
     font-size:1.2vw;
   }
 
- 
+ .fixed{
+   position:fixed;
+   bottom:0;
+ }
+
+ footer{
+   background-color:#9e6f16;
+   height:8%;
+   width:100%;
+   z-index:10;
+   font-size:12px;
+   
+   display: flex; /* 子要素をflexboxで揃える */
+    flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+    justify-content: center; /* 子要素をflexboxにより中央に配置する */
+    align-items: center;  /* 子要素をflexboxにより中央に配置する */
+ }
+ .footerText {
+ /* display: inline-block;*/
+  text-align:center;
+  }
+ .footerText >p{
+padding:8px 0 0 0;
+color:#000;
+
+ }
+ .fade{
+
+  animation: fadeIn 0.2s ease 0.3s 1 normal;
+
+}
+@keyframes fadeIn { /*animetion-nameで設定した値を書く*/
+
+  0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+
+  100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+
+}
+.displayNone{
+  display:none;
+}
