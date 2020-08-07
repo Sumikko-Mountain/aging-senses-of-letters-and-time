@@ -110,6 +110,7 @@ $(function () {
 
           console.log("p color changed");
           document.getElementById("wrapper").style.color = "#FFFFFF";
+          document.getElementById("wrapper").classList.add("eraserCursor");
           document.getElementById("footer").classList.remove("displayNone");
           document.getElementById("footer").classList.add("fade");
 
@@ -164,6 +165,7 @@ $(function () {
   };
 
   var sketch2 = function (p) {
+
     p.setup = function () {
       p.createCanvas(windowWidth, windowHeight);
       p.noStroke();
@@ -174,18 +176,20 @@ $(function () {
       p.resizeCanvas(windowWidth, windowHeight);
       //p.canvasSetup;
     };
+
     p.mouseDragged = function () {
       if (boardFlg == true) {
 
         p.fill(16, 92, 56, 100);
-        p.rect(p.mouseX, p.mouseY, 50, 30);
+        p.rect(p.mouseX, p.mouseY, 50, 22.5);
+
       }
     }
     p.touchMoved = function () {
       if (boardFlg == true) {
 
         p.fill(16, 92, 56, 100);
-        p.rect(p.mouseX, p.mouseY, 50, 30);
+        p.rect(p.mouseX, p.mouseY, 50, 22.5);
       }
     }
   };

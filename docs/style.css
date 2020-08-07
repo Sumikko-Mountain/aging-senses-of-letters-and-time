@@ -223,14 +223,14 @@ color:#000;
  }
  .fade{
 
-  animation: fadeIn 0.2s ease 0.3s 1 normal;
+  animation: fadeIn 0.5s ease 0.0s 1 normal;
 
 }
-@keyframes fadeIn { /*animetion-nameで設定した値を書く*/
+@keyframes fadeIn { 
 
-  0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+  0% {opacity: 0} 
 
-  100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+  100% {opacity: 1} 
 
 }
 .displayNone{
@@ -324,4 +324,9 @@ p.source{
 
 .is-hide{
   display:none;
+}
+
+
+.eraserCursor {
+  cursor: url(img/blackboardEraser.png), auto;
 }
