@@ -247,6 +247,10 @@ color:#000;
   height:100%;
   display: none;
   background: rgba(0,0,0,0.6);
+/*  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;  */
 }
 .flex{
   /*オーバーレイ内の要素を上下・左右中央揃え*/
@@ -255,30 +259,33 @@ color:#000;
   display: flex;
   justify-content: center;
   align-items: center; 
-}
-.overlay-inner{
-  padding:10px 60px;
-  background-color:#FFF;
   text-align:center;
 }
+.overlay-inner{
+  padding:50px 60px;
+  background-color:#FFF;
+  text-align:center;
+  max-width:50%;
+  font-size:20px;
+ 
+}
+.overlay-inner>p{
+margin:0 auto;
+padding:4px 0;
+line-height:1.3em;
+
+}
+
  #close-btn{
   display:block;
-  margin:20px auto;
+  margin:36px auto 0 auto;
   padding:12px 30px;
-  background-color:#c4c4c4;
-  border:solid #acacac 1px;
+  background-color:#fff;
+  border:solid #acacac 1.6px;
   cursor: pointer;
   text-align:center;
   border-radius: 4px;
-  font-size:20px;
-  /*display:block;
-
-
-  background-color:#c4c4c4;
-  border:solid #cecece 1px;
-  
-  cursor: pointer;
-  margin:0 1px;*/
+  font-size:16px;
 }
 
 .footerText >li{
@@ -296,6 +303,18 @@ color:#000;
 a{
   display:block;
 }
+p.source{
+  padding:24px 0 0 0;
+  font-size:18px;
+}
+.source>a{
+  color:#646464;
+  text-decoration: underline;
+}
+.source>a:hover{
+  color:#acacac;
+}
+
 .footerText >li:hover{
   background-color:#dfdfdf;
 }
