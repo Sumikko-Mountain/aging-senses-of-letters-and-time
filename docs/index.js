@@ -110,7 +110,7 @@ $(function () {
 
           console.log("p color changed");
           document.getElementById("wrapper").style.color = "#FFFFFF";
-          document.getElementById("wrapper").classList.add("eraserCursor");
+          document.getElementById("wrapper").classList.add("eraserCursor");/*うまく行ってない*/
           document.getElementById("footer").classList.remove("displayNone");
           document.getElementById("footer").classList.add("fade");
 
@@ -216,3 +216,4 @@ jQuery(function ($) {
     event.stopPropagation();
   });
 });
+
